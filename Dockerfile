@@ -23,7 +23,7 @@ RUN echo "🏗️ Building Tool 1..." && \
 
 # 📚 Tool Builder 2 - Simulates building another custom tool (like MuPDF)
 FROM ubuntu:22.04 AS tool-builder-2
-RUN echo "🔧 Setting up Tool Builder 2..."
+RUN echo "🔧 Setting up Tool Builder 2 - VERSION 2..."
 RUN apt-get update && \
   apt-get -y -qq --no-install-recommends install \
   build-essential git ca-certificates && \
