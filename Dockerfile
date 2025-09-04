@@ -36,7 +36,7 @@ RUN echo "📥 Cloning simulated tool repository..." && \
   echo '#!/bin/bash\necho "Custom Tool 2 v2.1.0 - Processing: $@"' > custom-tool-2/tool2 && \
   chmod +x custom-tool-2/tool2
 
-RUN echo "🏗️ Building Tool 2..." && \
+RUN echo "🏗️ Building Tool 2... again" && \
   sleep 3 && \
   echo "✅ Tool 2 build complete"
 
