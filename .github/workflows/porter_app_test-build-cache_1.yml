@@ -28,4 +28,4 @@ jobs:
                 PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
                 PORTER_TOKEN: ${{ secrets.PORTER_APP_1_1 }}
                 DOCKER_BUILDKIT: "1"
-                PORTER_BUILDKIT_CACHE_TO_MODE: ""
+                PORTER_BUILDKIT_CACHE_TO_MODE: "max"
