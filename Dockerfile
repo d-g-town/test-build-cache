@@ -49,11 +49,11 @@ RUN echo "📦 Setting up dependency installation..."
 WORKDIR /usr/src/app
 
 # Copy package files for dependency installation
-COPY package.json package-lock.json* ./
+COPY package.json package-lock.json ./
 
 # Install dependencies
 RUN echo "📚 Installing Node.js dependencies..." && \
-  npm ci --only=production && \
+  npm ci --omit=dev && \
   npm cache clean --force
 
 ######
@@ -65,7 +65,7 @@ RUN echo "🏗️ Setting up build environment..."
 WORKDIR /usr/src/app
 
 # Copy package files
-COPY package.json package-lock.json* tsconfig.json ./
+COPY package.json package-lock.json tsconfig.json ./
 
 # Install all dependencies (including dev dependencies)
 RUN echo "📚 Installing all dependencies for build..." && \
